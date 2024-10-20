@@ -699,12 +699,15 @@
     }
 
     .Titulo {
-        font-size: small;
+        height: 66px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .link {
         list-style: none;
-        font-size: x-small;
+        font-size: small;
     }
 
     .link a {
