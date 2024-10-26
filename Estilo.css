@@ -200,6 +200,16 @@
     border-radius: 10px 0px 10px 10px;
 }
 
+.divEnvio{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 20px;
+}
+
 .botao-enviar {
     margin-bottom: 10px;
     border: 0px;
@@ -641,7 +651,7 @@
 
     .enviarDocs {
         width: 360px;
-        height: 245px;
+        height: 330px;
         background-color: #fff;
         padding: 20px;
         border-radius: 10px;
