@@ -1,3 +1,3 @@
 document.getElementById("sairButton").onclick = function(){
-    location.href = "Login.html";
+    location.href = "index.html";
 };
