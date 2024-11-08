@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EaDTEC AVA</title>
 
+    <script>
+        // Verificar se o usuário está autenticado
+        if (!sessionStorage.getItem('autenticado')) {
+            // Redirecionar para login.html se não estiver autenticado
+            location.href = 'login.html';
+        }
+    </script>
+
     <link rel="stylesheet" href="Estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -25,7 +33,7 @@
                 </div>
             </div>
 
-            <button class="botao-sair" style="color: white; cursor: pointer;">
+            <button class="botao-sair" style="color: white; cursor: pointer;" id="sairButton">
                 Sair <i class="fa-solid fa-door-open"></i>
             </button>
 
@@ -296,5 +304,7 @@
     <script src="dark_Lightbutton.js"></script>
     <script src="Sidebar.js"></script>
 </body>
+
+<script src="botaoSair.js"></script>
 
 </html>
