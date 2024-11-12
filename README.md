@@ -2,7 +2,7 @@ https://edieloliveira.github.io/GeadEtec/
 
 para fazer login digite:
 
-Usuario
+Usuario: " Usuario "
 
-12345
+Senha : " 12345 "
 
