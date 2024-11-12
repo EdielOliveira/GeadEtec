@@ -4,305 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EaDTEC AVA</title>
-
-    <script>
-        // Verificar se o usuário está autenticado
-        if (!sessionStorage.getItem('autenticado')) {
-            // Redirecionar para login.html se não estiver autenticado
-            location.href = 'login.html';
-        }
-    </script>
-
-    <link rel="stylesheet" href="Estilo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="StyleLogin.css">
+    <title>Login Ead</title>
 </head>
 
 <body>
 
-    <div class="container" id="container">
-        <div class="main-header">
-            <header id="main-header" class="header">
-                <img id="logo-header" class="imagemheader" src="imagens/CETEC.png" alt="Logo">
-            </header>
-            
-            <div class="trilho" id="trilho">
-                <div class="indicador">
-                    <i class="fa-solid fa-sun" id="icon-light"></i>
-                    <i class="fa-solid fa-moon" id="icon-dark" style="display: none;"></i>
+    <div class="container">
+
+        <div class="ImagemComplements">
+            <div class="Patrocinio">
+                <div class="imagemGead">
+                    <img src="imagens/logos.png" style="width: 330px;" alt="Logo">
+
+                </div>
+
+                <div class="imagemInst">
+                    <img src="imagens/Group 73.png" style="width: 100%;" alt="Instituições">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="Login">
+            <div
+                style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                <div class="engloba" style="position:fixed;">
+                    <div style=" height: 60px; color: white;">
+                        <h2>AMBIENTE VIRTUAL</h2>
+                        <p style="font-weight: normal; text-align: left;">Ambiente Virtual de Aprendizagem para os
+                            Cursos Técnicos a Distância do Centro Paula Souza - EaDTEC</p>
+                    </div>
+
+                    <div
+                        style="width: 100%; height: 250px; display: flex; justify-content: center; align-items: center;">
+                        <form>
+                            <input type="text" placeholder="email/Ra do aluno" id="login">
+                            <input type="password" placeholder="senha" id="senha">
+
+                            <div
+                                style="width: 100%; height: 45px; display: flex; gap: 4rem; color: white; justify-content: center;">
+                                <h5 style="cursor: pointer; font-size: x-small;">[ ] Relembra-me</h5>
+                                <h5 style="cursor: pointer; font-size: x-small;">Validar Documentos?</h5>
+                                <h5 style="cursor: pointer; font-size: x-small;">Esqueceu a Senha?</h5>
+                            </div>
+
+                            <div style="width: 100%; height: 45px;">
+                                <input type="submit" placeholder="Entrar" onclick="logar(); return false"
+                                    style="background-color: #4F6B5C; width: 150px; height: 45px; border-radius: 10px; color: white; border: 0; cursor: pointer;">
+                            </div>
+                        </form>
+                    </div>
+                    </form>
+                </div>
+                <div
+                    style="width: 100%; height: 100%; display: flex; justify-content: end; align-items: end; padding: 10px;">
+                    <a href="https://AmbienteVirtual" style="color: white;">Manual do Ambiente Virtual</a>
                 </div>
             </div>
 
-            <button class="botao-sair" style="color: white; cursor: pointer;" id="sairButton">
-                Sair <i class="fa-solid fa-door-open"></i>
-            </button>
 
 
 
         </div>
-
-
-        <div class="main-content">
-            <aside class="main-sidebar">
-
-                <div class="accordion">
-                    <h3 class="accordion-title" id="Meu Espaço">
-                        <i class="fa-solid fa-user-large"></i> Meu Espaço
-                    </h3>
-
-                    <div class="accordion-painel">
-
-                        <ul>
-                            <li class="estlink"><a href="#">Correio Tec</a></li>
-                            <li class="estlink"><a href="#">Meu Blog</a></li>
-                            <li class="estlink"><a href="#">Meu Perfil</a></li>
-                            <li class="estlink"><a href="#">Informações Acadêmicas</a></li>
-                            <li class="estlink"><a href="#">Estágio</a></li>
-                            <li class="estlink"><a href="#">Conheça-nos</a></li>
-                        </ul>
-
-                    </div>
-
-                    <div class="accordion">
-                        <h3 class="accordion-title" id="Minha Turma">
-                            <i class="fa-solid fa-user-group"></i> Minha Turma
-                        </h3>
-
-                        <div class="accordion-painel">
-
-                            <ul>
-                                <li class="estlink"><a href="#">Meus Colegas</a></li>
-                                <li class="estlink"><a href="#">Meus Tutores</a></li>
-                                <li class="estlink"><a href="#">Fóruns</a></li>
-                                <li class="estlink"><a href="#">Bate-papo Agendado</a></li>
-                                <li class="estlink"><a href="#">Bloco de Notas</a></li>
-                                <li class="estlink"><a href="#">Documentos</a></li>
-                            </ul>
-
-                        </div>
-
-                        <div class="accordion">
-                            <h3 class="accordion-title" id="Area Comum">
-                                <i class="fa-solid fa-comment-dots"></i> Area Comum
-                            </h3>
-
-                            <div class="accordion-painel">
-
-                                <ul>
-                                    <li class="estlink"><a href="#">Avisos</a></li>
-                                    <li class="estlink"><a href="#">Bate-papo Livre</a></li>
-                                    <li class="estlink"><a href="#">FAQ</a></li>
-                                    <li class="estlink"><a href="#">Glossário</a></li>
-                                    <li class="estlink"><a href="#">MediaTec</a></li>
-                                    <li class="estlink"><a href="#">Wiki Integrado</a></li>
-                                </ul>
-
-                            </div>
-            </aside>
-
-            <div class="main-section">
-
-                <div class="welcome">
-                    <h1 class="gradient-text"> Olá, Ediel</h1>
-                    <h3 class="WelcomeTxt">Bem-vindo de volta!</h3>
-                </div>
-
-                <div class="quadro-avisos">
-                    <img class="logo-quadro" src="imagens/logo EADTec.png" alt="Logo">
-                    <h3 style="color: white; text-align: center;" class="Titulo">QUADRO DE AVISOS</h3>
-                    <ul style="list-style: none;">
-                        <li class="link"><a href="#"><i class="fas fa-calendar-alt"></i> 22/03/2024 - AGENDA DA
-                                SEMANA!</a></li>
-                        <li class="link"><a href="#"><i class="fas fa-calendar-alt"></i> 21/03/2024 - Gravação
-                                Encontro
-                                Síncrono</h6></a></li>
-                        <li class="link"><a href="#"><i class="fas fa-calendar-alt"></i> 20/03/2024 - Desafio
-                                LED!</a>
-                        </li>
-                        <li class="link"><a href="#"><i class="fas fa-calendar-alt"></i> 19/03/2024 - Tecnologia
-                                da
-                                Informação</a></li>
-                    </ul>
-                </div>
-
-                <div class="bibliotecas">
-                    <div class="GloGlo">
-
-                        <div class="enviarDocs">
-                            <div class="Titulo">
-                                <h2 style="    align-items: center;
-                                display: flex;
-                                justify-content: center;
-                                margin-bottom: revert;">CorreioTec</h2>
-                            </div>
-                            <hr class="linhasSeparar" style="margin-bottom: 5px;">
-
-                            <div class="divEnvio">
-                            <h2 class="Titulo"> <b><u>Envio de Documento</u></b></h2>
-                            <h3 class="link" style="text-align: justify; font-weight: normal; padding: 2px;">
-                                Você poderá enviar os
-                                documentos faltantes
-                                referentes a sua matrícula e/ou
-                                documentos referentes a Condições Especiais de Estudos/Guarda Religiosa através
-                                do botão
-                                a
-                                seguir.</h3>
-                            <br>
-                            <button class="botao-enviar" style="cursor: pointer; color: white;">Enviar <i
-                                    class="fa-solid fa-paper-plane"></i>
-                            </button>
-                        </div>
-
-                        </div>
-
-
-                    </div>
-                    <div class="GloGlo2">
-
-                        <div class="glossario">
-                            <h2>Bibliotecas</h2>
-                        </div>
-
-                        <div class="creditos">
-                            <h2>Creditos</h2>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-            <div class="perfil-section">
-
-                <div class="perfil">
-                    <h2 style="color: white; padding: 10px; align-items: first baseline;"> Perfil </h2>
-                    <div class="content-Conteudo">
-                        <div class="conteudo">
-                            <button class="Ocutar">
-                            </button>
-                            <br>
-                            <h4>EDIEL INACIO DE OLIVEIRA SILVA</h4>
-                            <h2 style="margin-bottom: 10px;">Ediel</h2>
-                            <hr class="linhasSeparar" style="margin-bottom: 5px;">
-                            <div style="height: 20px; margin-bottom: 2px; display: flex;">
-                                <h5>Modalidade:</h5>
-                                <h5 style="font-weight: normal; text-align: left;">Online</h5>
-                                <h5 style="margin-left: 60px;">SP24AO0243376</h5>
-                            </div>
-                            <hr class="linhasSeparar" style="margin-bottom: 7px;">
-                            <div
-                                style="height: 150px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-around;">
-                                <h3> Graficos </h3>
-                            </div>
-                            <hr class="linhasSeparar" style="margin-bottom: 5px;">
-                            <div
-                                style="height: 50px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-around;">
-                                <h5>(Desenvolvimento de Sistemas, Modulo 1)</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion">
-                    <h3 class="accordionPerfil-title" id="Meu Espaço">
-                        <i class="fa-solid fa-list"></i> Aulas/Agendas
-                    </h3>
-
-                    <div class="accordion-perfil">
-                        <div class="scroll-container">
-                            <ul>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 05 - Desenvolvimento de Sistemas
-                                        </h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 06 - Tecnologias da Informação I
-                                        </h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 07 - Tecnologias da Informação
-                                            II</h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 08 - Tecnologias da Informação
-                                            III</h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 05 - Desenvolvimento de Sistemas
-                                        </h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 06 - Tecnologias da Informação I
-                                        </h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 07 - Tecnologias da Informação
-                                            II</h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 08 - Tecnologias da Informação
-                                            III</h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 05 - Desenvolvimento de Sistemas
-                                        </h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 06 - Tecnologias da Informação I
-                                        </h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 07 - Tecnologias da Informação
-                                            II</h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 08 - Tecnologias da Informação
-                                            III</h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 05 - Desenvolvimento de Sistemas
-                                        </h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 06 - Tecnologias da Informação I
-                                        </h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 07 - Tecnologias da Informação
-                                            II</h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 08 - Tecnologias da Informação
-                                            III</h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 05 - Desenvolvimento de Sistemas
-                                        </h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 06 - Tecnologias da Informação I
-                                        </h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 07 - Tecnologias da Informação
-                                            II</h5>
-                                    </a></li>
-                                <li class="estlink"><a href="#">
-                                        <h5 style="font-weight: normal;">Agenda 08 - Tecnologias da Informação
-                                            III</h5>
-                                    </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
-    <script src="dark_Lightbutton.js"></script>
-    <script src="Sidebar.js"></script>
-    <script src="botaoSair.js"></script>
+    <script src="login.js"></script>
 </body>
+
 </html>
