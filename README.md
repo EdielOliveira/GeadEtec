@@ -1,7 +1,8 @@
 https://edieloliveira.github.io/GeadEtec/
 
-se quiser acesar a proxima pagina Depois do "login" digite isso aqui
+para fazer login digite:
 
-https://edieloliveira.github.io/GeadEtec/index.html
+Usuario
 
-no URL da pagina quando clicar no primeiro link desse README.md
+12345
+
