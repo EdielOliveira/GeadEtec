@@ -6,7 +6,7 @@ function logar() {
 
     if (login == "ediel.silva5@etec.com" && senha == "edieletec") {
         sessionStorage.setItem('autenticado', 'true');
-        location.href = "index.html";
+        location.href = "login.html";
     } else {
         alert('Usuario ou senha incorretos')
 
